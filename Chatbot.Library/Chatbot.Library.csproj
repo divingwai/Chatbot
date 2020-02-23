@@ -64,10 +64,20 @@
     <Reference Include="MySql.Data.Entity.EF6">
       <HintPath>..\packages\MySql.Data.Entity.6.10.7\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.20\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ChatbotService.cs" />
+    <Compile Include="Readers\LexisReader.cs" />
+    <Compile Include="Models\Symbol.cs" />
+    <Compile Include="Models\Syllable.cs" />
+    <Compile Include="Models\Word.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Chatbot.Database\Chatbot.Database.csproj">
