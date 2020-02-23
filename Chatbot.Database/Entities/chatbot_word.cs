@@ -7,7 +7,7 @@ namespace Chatbot.Database.Entities
     public class chatbot_word
     {
         [Key]
-        public string id { get; set; }
+        public string symbol_id { get; set; }
 
         [Key]
         public string syllable_id { get; set; }
@@ -17,6 +17,8 @@ namespace Chatbot.Database.Entities
         public virtual ICollection<chatbot_wordphrase> wordphrases { get; set; }
 
         public chatbot_syllable syllable { get; set; }
+
+        public chatbot_symbol symbol { get; set; }
 
         public chatbot_word()
         {

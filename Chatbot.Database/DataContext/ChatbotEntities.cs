@@ -32,7 +32,8 @@ namespace Chatbot.Database.DataContext
         {
 
             modelBuilder.Entity<chatbot_word>()
-                .HasKey(x => x.id);
+                .HasKey(x => new { x.syllable_id, x.symbol_id });
+
             modelBuilder.Entity<chatbot_word>()
                 .HasRequired(x => x.syllable)
                 .WithMany(p => p.words)
@@ -56,17 +57,29 @@ namespace Chatbot.Database.DataContext
 
 
             modelBuilder.Entity<chatbot_wordphrase>()
-                .HasKey(k => new { k.word, k.phrase });
+                .HasKey(k => new { k.symbol_id, k.syllable_id , k.phrase_id });
 
             modelBuilder.Entity<chatbot_wordphrase>()
                 .HasRequired(x => x.word)
                 .WithMany(x => x.wordphrases)
-                .HasForeignKey(x => x.word_id);
+                .HasForeignKey(x => new { x.syllable_id, x.symbol_id });
 
             modelBuilder.Entity<chatbot_wordphrase>()
                 .HasRequired(x => x.phrase)
                 .WithMany(x => x.wordphrases)
                 .HasForeignKey(x => x.phrase_id);
+
+            modelBuilder.Entity<chatbot_wordphrase>()
+               .HasRequired(x => x.symbol)
+               .WithMany(x => x.wordphrases)
+               .HasForeignKey(x => x.symbol_id);
+
+
+            modelBuilder.Entity<chatbot_wordphrase>()
+               .HasRequired(x => x.syllable)
+               .WithMany(x => x.wordphrases)
+               .HasForeignKey(x => x.syllable_id);
+
 
             base.OnModelCreating(modelBuilder);
         }
