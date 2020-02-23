@@ -32,17 +32,23 @@ namespace Chatbot.Library.Readers
             WebClient wc = new WebClient();
             wc.Encoding = Encoding.GetEncoding("big5");
             string data = wc.DownloadString(url);
-            string pattern = @"pho-rel.php\?s2=(\w)";
+            string pattern = @"pho-rel.php\?s2=(\w+)";
             MatchCollection matches = Regex.Matches(data, pattern);
 
             foreach (Match match in matches)
             {
-                string link = Path.Combine(match.Value);
+                string link = Path.Combine(m_syllableUrlTemplate, match.Value);
                 ReadSyllableLink(wc, link);
 
             }
 
             return m_syllables;
+
+        }
+
+        public void SetSyllables(List<Syllable> syllables)
+        {
+            m_syllables = syllables;
 
         }
 

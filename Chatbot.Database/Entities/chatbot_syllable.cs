@@ -8,9 +8,9 @@ namespace Chatbot.Database.Entities
     {
         [Key]
         public string id { get; set; }
-        public ICollection<chatbot_sound> sounds { get; set; }
+        public virtual ICollection<chatbot_sound> sounds { get; set; }
 
-        public ICollection<chatbot_word> words { get; set; }
+        public virtual ICollection<chatbot_word> words { get; set; }
 
         public virtual ICollection<chatbot_wordphrase> wordphrases { get; set; }
 

@@ -17,13 +17,13 @@ namespace Chatbot.Database.Entities
 
         public int location { get; set; }
 
-        public chatbot_syllable syllable  { get; set; }
+        public virtual chatbot_syllable syllable  { get; set; }
 
-        public chatbot_symbol symbol { get; set; }
+        public virtual chatbot_symbol symbol { get; set; }
 
-        public chatbot_word word { get; set; }
+        public virtual chatbot_word word { get; set; }
 
-        public chatbot_phrase phrase { get; set; }
+        public virtual chatbot_phrase phrase { get; set; }
 
 
         public chatbot_wordphrase()

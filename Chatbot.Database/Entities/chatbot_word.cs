@@ -16,13 +16,12 @@ namespace Chatbot.Database.Entities
 
         public virtual ICollection<chatbot_wordphrase> wordphrases { get; set; }
 
-        public chatbot_syllable syllable { get; set; }
+        public virtual chatbot_syllable syllable { get; set; }
 
-        public chatbot_symbol symbol { get; set; }
+        public virtual chatbot_symbol symbol { get; set; }
 
         public chatbot_word()
         {
-            wordphrases = new HashSet<chatbot_wordphrase>();
         }
     }
 }
