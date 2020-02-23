@@ -1,4 +1,5 @@
 ﻿using System;
+using Chatbot.Library.Services;
 
 namespace Chatbot.Execute
 {
@@ -6,7 +7,8 @@ namespace Chatbot.Execute
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ChatbotService chatbotService = new ChatbotService();
+            chatbotService.UpdateData();
         }
     }
 }

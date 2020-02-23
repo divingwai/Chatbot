@@ -4,18 +4,17 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Chatbot.Database.Entities
 {
-    public class chatbot_syllable
+    public class chatbot_source
     {
         [Key]
         public string id { get; set; }
-        public ICollection<chatbot_sound> sounds { get; set; }
 
-        public ICollection<chatbot_word> words { get; set; }
+        public virtual ICollection<chatbot_sound> sounds { get; set; }
 
-        public chatbot_syllable()
+
+        public chatbot_source()
         {
             sounds = new HashSet<chatbot_sound>();
-            words = new HashSet<chatbot_word>();
         }
     }
 }
