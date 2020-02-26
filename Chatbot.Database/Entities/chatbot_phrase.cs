@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Chatbot.Database.Entities
+namespace Chatbot.Database
 {
     public class chatbot_phrase
     {

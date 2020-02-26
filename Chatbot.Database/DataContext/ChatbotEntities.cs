@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
-using Chatbot.Database.Entities;
 
-namespace Chatbot.Database.DataContext
+namespace Chatbot.Database
 {
     public class ChatbotEntities : DbContext
     {

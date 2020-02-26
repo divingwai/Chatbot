@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Chatbot.Database.Entities
+namespace Chatbot.Database
 {
     public class chatbot_sound
     {

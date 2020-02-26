@@ -78,6 +78,8 @@
     <Compile Include="Models\Symbol.cs" />
     <Compile Include="Models\Syllable.cs" />
     <Compile Include="Models\Word.cs" />
+    <Compile Include="Readers\WordsReader.cs" />
+    <Compile Include="Models\Source.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Chatbot.Database\Chatbot.Database.csproj">
